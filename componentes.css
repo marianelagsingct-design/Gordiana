@@ -1,0 +1,173 @@
+/* ===================================================
+   1. TIPOGRAFÍA Y ENCABEZADOS DE SECCIÓN
+   =================================================== */
+h1, h2, h3 {
+  font-family: var(--font);
+  color: var(--text);
+  margin-bottom: 12px;
+}
+
+h1 {
+  font-size: var(--h1);
+  font-weight: var(--bold);
+  color: var(--primary-dark);
+  border-bottom: 2px solid #E2E8F0;
+  padding-bottom: 8px;
+}
+
+h2 {
+  font-size: var(--h2);
+  font-weight: var(--semi-bold);
+  color: var(--primary);
+  margin-top: 24px;
+}
+
+/* ===================================================
+   2. TARJETAS / BLOQUES DE CONTENIDO (Para separar el caos)
+   =================================================== */
+/* Esto envuelve los formularios, filtros y listas en cajitas blancas separadas */
+fieldset, 
+form, 
+.panel-filtros,
+.tarjeta-seccion {
+  background-color: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: var(--radius);
+  padding: 16px;
+  margin-bottom: 24px; /* Espacio clave entre secciones */
+  box-shadow: var(--shadow);
+}
+
+legend {
+  font-weight: var(--semi-bold);
+  color: var(--secondary);
+  padding: 0 8px;
+}
+
+/* ===================================================
+   3. BOTONES Y ACCIONES
+   =================================================== */
+button, 
+.btn {
+  font-family: var(--font);
+  font-size: var(--small);
+  font-weight: var(--semi-bold);
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+  margin: 4px 2px;
+}
+
+/* Botón Principal (Azul) */
+button[type="submit"],
+#btn-nueva-herramienta,
+#btn-aplicar-filtros {
+  background-color: var(--primary);
+  color: #FFFFFF;
+}
+
+button[type="submit"]:hover {
+  background-color: var(--primary-dark);
+}
+
+/* Botones Secundarios (Gris suave para que no sea todo azul) */
+button[type="reset"],
+#btn-limpiar-filtros,
+#btn-volver {
+  background-color: #EDF2F7;
+  color: #4A5568;
+}
+
+button[type="reset"]:hover {
+  background-color: #E2E8F0;
+}
+
+/* ===================================================
+   4. FORMULARIOS E INPUTS
+   =================================================== */
+label {
+  display: block;
+  font-size: var(--small);
+  font-weight: var(--semi-bold);
+  color: var(--text);
+  margin-top: 10px;
+  margin-bottom: 4px;
+}
+
+input[type="text"],
+select,
+textarea {
+  width: 100%;
+  padding: 10px 12px;
+  font-family: var(--font);
+  font-size: var(--text-size);
+  border: 1px solid #CBD5E0;
+  border-radius: 8px;
+  background-color: #FAFAFA;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+input[type="text"]:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--primary);
+  background-color: #FFFFFF;
+}
+
+/* Checkboxes ordenados */
+input[type="checkbox"] {
+  margin-right: 6px;
+  transform: scale(1.1);
+}
+
+/* ===================================================
+   5. LISTADO DE HERRAMIENTAS E HISTORIAL
+   =================================================== */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* Transforma los ítems de lista feos en tarjetas limpias */
+ul li {
+  background-color: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-left: 5px solid var(--primary);
+  border-radius: var(--radius);
+  padding: 12px 16px;
+  margin-bottom: 10px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+/* Historial con un toque de color secundario */
+.historial-lista li, 
+ul li:has(span) {
+  border-left-color: var(--secondary);
+  font-size: var(--small);
+}
+
+/* ===================================================
+   6. BOTÓN ATRÁS / FLECHA MEJORADA
+   =================================================== */
+/* Para arreglar la flecha gigante y fea que sale en tus fotos */
+button:has(svg), 
+.btn-atras {
+  background-color: transparent;
+  border: 1px solid #CBD5E0;
+  color: var(--text);
+  padding: 6px 12px;
+  max-width: fit-content;
+}
+
+button img, 
+button svg {
+  max-width: 20px;
+  max-height: 20px;
+}
